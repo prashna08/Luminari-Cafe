@@ -1,0 +1,299 @@
+/*Header styling section*/
+
+header{
+    width: 100%;
+    z-index: 5;
+    position: fixed; /* to make the header fixed */
+    background: linear-gradient(to right, #ffe3c9,#E8C5A5);
+}
+
+header .nav-bar{
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+    padding: 23px;
+  
+}
+
+.nav-bar .logo-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 2px;
+}
+
+.nav-bar .logo-bar .logo-img{
+  object-fit: contain;
+  position: absolute;
+  top: -14px;
+    width: 45px;
+    height: 45px;
+    
+}
+
+.nav-bar .logo-bar .logo-text{
+    line-height: 1;
+    position: absolute;
+    right: -200px;
+    font-family: Wisteria;
+    color: #040202;
+    font-size: 25px;
+}
+
+.nav-bar .nav-list{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-list .nav-link{
+    color: #040202;
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 0px 15px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav-bar .nav-list .nav-link:hover{
+    color: #61371f;
+}
+
+.nav-bar .nav-list .nav-link::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 3px;
+    background-color:rgba(152, 126, 85, 0.723);
+    transition: 0.3s ease;
+}
+
+
+.nav-bar .nav-list .nav-link:hover::before{
+    width: 100%;
+}
+
+
+
+.hero-section{
+    min-height: 100vh; /* to make the hero section full height */
+   background: linear-gradient(to right, #ffe3c9,#E8C5A5);
+}
+.hero-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* to make the hero section full height */
+
+}
+.hero-section .hero-detail{
+    color: #040202;
+    
+    
+}
+.hero-section .hero-detail .title{
+    font-size: 50px;
+  
+}
+.hero-section .hero-detail .subtitle{
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.hero-section .hero-detail .description{
+    font-size: 20px;
+    width: 90%;
+    margin: 24px 0 40px;
+}
+
+.hero-img{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px rgba(85, 68, 41, 0.836);    
+   
+}
+
+.hero-section .hero-img-wrapper{
+    width: 1500px;
+    margin-right: 30px;
+    
+}
+
+.hero-section .hero-detail .buttons{
+    display: flex;
+    gap: 23px;
+}
+.hero-section .hero-detail .button{
+    padding: 10px 26px;
+    background-color: #61371f;
+    color: whitesmoke;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-weight: 550;
+    transition: 0.3s ease;
+}
+.hero-section .hero-detail .button:hover,
+.hero-section .hero-detail .location{
+    background-color: #ffe3c9;
+    color: #61371f;
+    border-color:#61371f ;
+}
+.hero-section .hero-detail .location:hover{
+    background-color: #61371f;
+    color: whitesmoke;
+}
+
+/*About styling section*/
+.about-section{
+    background-color: #61371f;
+    padding: 120px 0;
+    color: whitesmoke;
+}
+
+.about-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-section .section-content .section-title{
+    padding: 0;
+}
+
+.about-section .about-img-wrapper .about-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px rgba(144, 133, 121, 0.836);
+    object-fit: cover;
+}
+
+.about-section .about-details .text{
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.about-section .about-details .social-link-list{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.about-section .about-details .social-link-list .social-link{
+    font-size: 22px;
+    color: whitesmoke;
+    transition: 0.2s ease
+}
+
+.about-section .about-details .social-link-list .social-link:hover{
+    color: #eca61a;
+    
+    
+}
+
+/*Responsive Design*/
+
+@media screen and (max-width: 900px){
+
+    /*Header*/
+    body.show-mobile-menu header::before{
+        content: '';
+        position: fixed;
+        left:0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(158, 120, 74, 0.3);
+    }
+
+    .nav-bar :where(#menu-open-button, #menu-close-button),
+    .about-section .about-details{
+        font-size: 20px;
+        display: block; 
+        background: none; /* Removes the background */
+        border: none; /* Removes any border if present */
+        outline: none; /* Removes the outline */
+
+    }
+    .nav-bar #menu-close-button{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .nav-bar .nav-list {
+        display: block;
+        position: fixed;
+        width: 350px;
+        height: 100%;
+        left: -350px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        gap:30px;
+        background: #f5f5f5;
+        transition: 0.3s ease;
+    }
+
+    body.show-mobile-menu .nav-bar .nav-list{
+        left: 0px;
+    }
+
+    .nav-bar .nav-list .nav-link {
+        display: block; /* Ensure each link takes full width */
+        margin-top: 0; /* Remove extra margin */
+        text-align: center; /* Center-align the text */
+        padding: 10px 0; /* Add padding for better spacing */
+        font-size: 20px;
+    }
+
+    /*Hero section*/
+    .hero-section .section-content{
+        gap: 50px;
+        text-align: center;
+        padding: 50px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .hero-section .hero-detail :is(.subtitle, .description){
+       max-width: 100%;
+  
+    }
+
+    .hero-section .hero-detail .buttons{
+        justify-content: center;
+    }
+
+    .hero-section .hero-img-wrapper{
+        max-width: 300px;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    /*About section*/
+    .about-section .section-content{
+        gap: 50px;
+        flex-direction: column-reverse;
+    }
+
+
+}
+@media screen and (min-width:900px) {
+    .nav-bar .fas{
+        display: none;
+    }
+    
+}
