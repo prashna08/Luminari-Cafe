@@ -2,7 +2,7 @@ header{
     width: 100%;
     z-index: 5;
     position: fixed; /* to make the header fixed */
-    background-color: #f7f7f6;
+    background-color: #14100f;
 }
 
 header .nav-bar{
@@ -20,7 +20,7 @@ header .nav-bar{
 .nav-bar .logo-bar .logo-text{
     line-height: 1;
     font-size: 25px;
-    color: #14100f;
+    color: #f7f7f6;
 }
 
 .nav-bar .nav-list{
@@ -33,11 +33,11 @@ header .nav-bar{
 .nav-bar .nav-list .nav-link{
     font-size: 18px;
     padding: 0 15px;
-    color: #14100f;
+    color: #f7f7f6;
     position: relative;
 }
 .nav-bar .nav-list .nav-link:hover{
-    color: black;
+    color: white;
 }
 .nav-bar .nav-list .nav-link::before{
     content: '';
@@ -47,7 +47,7 @@ header .nav-bar{
     width: 0;
     height: 2px;
     border-radius: 3px;
-    background-color:#14100f;
+    background-color:#f7f7f6;
     transition: 0.3s ease;
 }
 .nav-bar .nav-list .nav-link:hover::before{
@@ -135,33 +135,173 @@ header .nav-bar{
 .brand-section{
     padding: 40px 0;
     background: #f7f7f6;
-    height: 100vh;
+    height: auto;
 }
-.brand-section .section-content .brand-item{
+
+.brand-section .section-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.brand-section  .feature-details{
+    margin: 0 auto;
+    width: 70%;
+    
+    
+}
+.brand-section .feature-details .title{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom:20px;
+}
+
+.brand-section .feature-details .description{
+    font-size: 18px;
+   
+}
+
+.brand-section .container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.brand-section .container .support-container{
+    width: 350px;
+    height: auto;
+    background-color:#efefef;
+    border-radius: 5px;
+   box-shadow: 0 0 5px rgb(207, 207, 207);
+    text-align: center;
+    transition: 0.3s ease;
+    
+}
+.brand-section .container .support-container:hover{
+    background-color: #eaeaea;
+}
+.brand-section .support-container .support-icon{
+    width: 60px;
+}
+.brand-section .support-container .text{
+    font-size: 17px;
+    margin: 7px 0;
+}
+.brand-section .support-container .text-supp{
+    font-size: 14px;
+}
+
+/*Collection Section*/
+.collection-section{
+    height: auto;
+    background: #14100f;
+    color: #f7f7f6;
+    padding: 40px 0;
+
+}
+.collection-section .section-content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 60vh;
-}
-
-.brand-section .brand-img-wrapper {
-    width: 100%; /* Ensure the wrapper takes full width */
-    max-width: 600px; /* Set a maximum width for the images */
+    gap: 25px;
+    height: auto;
    
-
-    margin: 0 auto; /* Center the images */
 }
-
-.brand-section .brand-img {
-    width: 100%; /* Make the image responsive */
-    height: 400px; /* Maintain the aspect ratio */
+.collection-section .collect-img-wrapper{
+    width: 650px;
+    
+   
+}
+.collection-section .collect-img-wrapper .collect-img{
+    width: 100%;
+    height: 450px;
     object-fit: cover;
-    border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0px 0px 9px rgba(144, 133, 121, 0.836); /* Optional: Add a shadow */
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
-.brand-section .brand-img-wrapper:hover{
+.collection-section .collect-img-wrapper .collect-img:hover{
     box-shadow: 0 0 10px gray;
+    
 }
+.collection-section .collection-detail .title{
+    font-size: 40px;
+    width: 50%;
+    
+}
+.collection-section .collection-detail .description{
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.collection-section .collection-detail .buttons{
+    margin: 40px;
+    position: relative;
+}
+
+.collection-section .collection-detail .button{
+    padding: 15px 25px;
+    background-color: #f7f7f6;
+    color: #14100f;
+    position: absolute;
+    left: -40px;
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+.collection-section .collection-detail .button:hover{
+    border-bottom-right-radius: 0px;
+    box-shadow: 0 0 17px gray;
+    
+}
+
+/*Highlight Section*/
+.highlight-section{
+    height: auto;
+    background: #f7f7f6;
+    color: #14100f;
+    padding: 40px 0;
+}
+.highlight-section .section-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 60px;
+    gap: 20px;
+}
+.highlight-section .highlight-card{
+    max-width: 250px;
+    width: calc(33.33%-20px);
+    height: auto;
+    border-radius: 3px;
+    background-color: rgb(242, 241, 241);
+    box-shadow: 0 0 3px rgb(56, 56, 56);
+    
+    
+}
+.highlight-section .highlight-card .highlight-img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.highlight-section .highlight-card .text{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 3px;
+
+}
+
+.highlight-section .highlight-card .price{
+    font-size: 15px;
+    margin: 5px 3px;
+    color: rgb(43, 42, 42);
+}
+
+
 /*Responsive Design*/
 
 @media screen and (max-width: 900px){
@@ -183,7 +323,12 @@ header .nav-bar{
         background: none; /* Removes the background */
         border: none; /* Removes any border if present */
         outline: none; /* Removes the outline */
+        color: #f7f7f6;
 
+    }
+    .nav-bar :where( #menu-close-button)
+    {
+        color:#14100f;
     }
     .nav-bar #menu-close-button{
         position: absolute;
@@ -203,6 +348,7 @@ header .nav-bar{
         align-items: center;
         padding: 20px;
         gap:15px;
+        
         background: #f7f7f6;
         transition: 0.5s ease;
     }
@@ -217,16 +363,23 @@ header .nav-bar{
         text-align: center; /* Center-align the text */
         padding: 10px 0; /* Add padding for better spacing */
         font-size: 20px;
+        color: #14100f;
+    }
+    .nav-bar .nav-list .nav-link:hover{
+        color: black;
+    }
+    .nav-bar .nav-list .nav-link::before{
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 3px;
+        background-color:#14100f;
+        transition: 0.3s ease;
     }
 
-}
-@media screen and (min-width:900px) {
-    .nav-bar .fas{
-        display: none;
-    }
-    
-}
-@media screen and (max-width: 900px) {
     .brand-section .brand-img-wrapper {
         max-width: 370px; /* Reduce the maximum width */
         display: flex;
@@ -237,12 +390,66 @@ header .nav-bar{
     .brand-section .brand-img {
         height: 300px; /* Reduce the height */
     }
+
+    .collection-section .collect-img-wrapper{
+        width: 450px;
+        
+       
+    }
+    .collection-section .collect-img-wrapper .collect-img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        
+    }
+
+    .highlight-section .section-content {
+        display: flex; /* Use Flexbox */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        justify-content: center; /* Center the cards horizontally */
+        gap: 15px; /* Adjust spacing between the cards */
+    }
+
+    .highlight-section .highlight-card {
+        width: calc(33.33% - 15px); /* Ensure 3 cards fit in a row */
+        max-width: 230px; /* Set a maximum width for the cards */
+        height: auto; /* Maintain auto height */
+        border-radius: 3px;
+    }
+  
+    .highlight-section .highlight-card .highlight-img {
+        width: 100%; /* Make the image responsive */
+        height: 300px; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image fits within its container */
+        border-radius: 3px;
+    }
+
+}
+@media screen and (min-width:900px) {
+    .nav-bar .fas{
+        display: none;
+    }
+    
 }
 
+
 @media screen and (max-width: 600px) {
+
+    .brand-section .feature-details .title{
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom:20px;
+    }
+    
+    .brand-section .feature-details .description{
+        font-size: 14px;
+       
+    }
+    
     .brand-section .section-content .brand-item {
         flex-direction: column; /* Keep items stacked in a column */
          /* Adjust spacing for smaller screens */
+        
     }
 
     .brand-section .brand-img-wrapper {
@@ -252,4 +459,62 @@ header .nav-bar{
     .brand-section .brand-img {
         height: 200px; /* Further reduce the height */
     }
+    .brand-section .support-container .support-icon{
+        width: 40px;
+    }
+
+    .brand-section .support-container .text{
+        font-size: 13px;
+    }
+    .brand-section .support-container .text-supp{
+        font-size: 12px;
+    }
+
+    .collection-section .collect-img-wrapper{
+        width: 400px;
+        
+       
+    }
+    .collection-section .collect-img-wrapper .collect-img{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        
+    }
+
+    .collection-section .collection-detail .title{
+        font-size: 26px;
+        width: 50%;
+        
+    }
+    .collection-section .collection-detail .description{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .collection-section .collection-detail .button{
+        padding: 8px 10px;
+        border-radius: 10px
+    }
+
+    .highlight-section .section-content {
+        display: flex; /* Use Flexbox */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        justify-content: center; /* Center the cards horizontally */
+        gap: 15px; /* Adjust spacing between the cards */
+    }
+
+    .highlight-section .highlight-card {
+        width:100%; /* Ensure 2 cards fit in a row */
+        max-width: 250px; /* Set a maximum width for the cards */
+        height: auto; /* Maintain auto height */
+        border-radius: 3px;
+    }
+
+    .highlight-section .highlight-card .highlight-img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image fits within its container */
+        border-radius: 3px;
+    }
+  
 }

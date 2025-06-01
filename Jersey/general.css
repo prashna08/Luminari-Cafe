@@ -20,13 +20,13 @@ button{
 
 .section-content{
     margin: 0 auto;/* to center the content */
-    padding: 0 40px;
+    padding: 0 30px;
     max-width: 1400px;
 }
 
 .section-title{
     text-align: center;
-    padding: 40px 0;
+    padding: 30px 0;
     text-transform: uppercase;
     font-family: 50px;
 }
@@ -38,7 +38,7 @@ button{
     display: block;
     margin: 10px auto 0;
     border-radius: 10px;
-    background-color: #14100f;
+    background-color: #6e3729;
 }
 
 /*Fonts Name*/
